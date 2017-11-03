@@ -1,5 +1,6 @@
 var Word = require('./word.js');
 var prompt = require('prompt');
+var letter = require('./letter.js');
 
 console.log("Lets play Superhero Hangman!");
 console.log("Guess a letter of the word or name");
@@ -20,14 +21,18 @@ game = {
  		this.currentWrd = new Word(this.wordBank[Math.floor(Math.random()* this.wordBank.length)]);
  		this.currentWrd.getLet();
  		this.promptUser();
+
  	},
 
  	resetGuesses: function(){
  		this.guessesRemaining = 10;
+    console.log("Your word will be from the following wordbank: superman, batman, flash, spiderman, clarkkent, ironman, thor");
  	},
 
  	promptUser: function(){
  		var mars = this;
+
+
  		prompt.get(['guessLetter'], function(err, result){
  			console.log("You guessed: " + result.guessLetter);
  			var manyGuessed = mars.currentWrd.checkLetter(result.guessLetter);
@@ -40,6 +45,10 @@ game = {
  				console.log("CORRECT");
  					if(mars.currentWrd.findWord()){
  						console.log("You won!");
+            //console.log(mars.currentWrd);
+            //console.log(this.currentWrd);
+            //console.log(mars.currentWrd.target);
+            console.log("Your superhero word: " + mars.currentWrd.wordRender());
 
  						return;
  					}

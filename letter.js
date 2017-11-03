@@ -1,8 +1,9 @@
+
 var letter = function(Let){
 	this.charac = Let;
 	this.appear = false;
 	this.letterRender = function(){
-		return !(this.appear) ? "_" : this.charac;
+		return !(this.appear)? "_" : this.charac;
 	};
 };
 
