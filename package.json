@@ -1,0 +1,29 @@
+{
+  "name": "superhero-hangman",
+  "version": "1.0.0",
+  "description": "find the word that represents the superhero",
+  "main": "it must be a superhero",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "guess a letter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atendolk/node-man.git"
+  },
+  "keywords": [
+    "superman",
+    "batman",
+    "flash",
+    "etc"
+  ],
+  "author": "Anish Tendolkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atendolk/node-man/issues"
+  },
+  "homepage": "https://github.com/atendolk/node-man#readme"
+}
